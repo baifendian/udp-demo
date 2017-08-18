@@ -10,25 +10,25 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 
 | 属性        | 类型   |  描述  |
 | --------   | -----:  | :----:  |
-|     dt     |    date    |  日期  |
+| dt     |    date    |  日期  |
 | average_temperature     | double |   平均气温     |
 | average_temperature_uncertainty  |  double   |   平均气温浮动大小   |
-|     city     |    string    |  城市  |
-|     country     |    string    |  国家  |
-|     latitude     |    string    |  纬度  |
-|     longitude     |    string    |  经度  |
-|     year     |    int    |  年份  |
+| city     |    string    |  城市  |
+| country     |    string    |  国家  |
+| latitude     |    string    |  纬度  |
+| longitude     |    string    |  经度  |
+| year       |int    |  年份  |
 
 获奖记录表
 
 | 属性        | 类型   |  描述  |
 | --------   | -----:  | :----:  |
 | year     | string |   年份     |
-| ceremony  |  int   |   典礼   |
-|     award     |    string    |  奖项  |
-|     winner     |    int    |  获得者  |
-|     name     |    string    |  获奖者名字  |
-|     film     |    string    |  电影  |
+| ceremony  |  int  |   典礼   |
+| award     |    string    |  奖项  |
+| winner     |int    |  获得者  |
+| name     |    string    |  获奖者名字  |
+| film     |    string    |  电影  |
 
 # 资源介绍
 *
