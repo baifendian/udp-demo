@@ -6,7 +6,7 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 * [电影获奖记录](https://www.kaggle.com/theacademy/academy-awards)
 
 # 模型和表设计
-温度表
+`温度`表
 
 | 属性        | 类型   |  描述  |
 | --------   | -----:  | :----:  |
@@ -17,9 +17,9 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 | country     |    string    |  国家  |
 | latitude     |    string    |  纬度  |
 | longitude     |    string    |  经度  |
-| year       |int    |  年份  |
+| year       |    int    |  年份  |
 
-获奖记录表
+`获奖记录`表
 
 | 属性        | 类型   |  描述  |
 | --------   | -----:  | :----:  |
@@ -56,10 +56,10 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 
 ## 场景三
 > 说明: 场景的目的是希望用户了解流任务的基本使用
-1. 构建一个 Spark 流任务, 从 Socket 端口读取消息并写到控制台
+1. [构建一个 Spark 流任务, 从 Socket 端口读取消息并写到控制台](https://github.com/baifendian/udp-demo/wiki/spark-example)
 
-2. 构建一个 Storm 流任务, 从 Kafka 读取消息, 做单词统计并写到控制台
+2. [构建一个 Storm 流任务, 从 Kafka 读取消息, 分析错误日志并记录到 Kafka 中](https://github.com/baifendian/udp-demo/wiki/storm-example)
 
 ## 场景四
 > 说明: 场景的目的是希望用户了解 "可视化" ETL 的基本使用
-1. 构建一个可视化 ETL 任务, 并执行(包括发布)
+1. [构建一个可视化 ETL 任务, 并执行(包括发布)](https://github.com/baifendian/udp-demo/wiki/etl-example)
