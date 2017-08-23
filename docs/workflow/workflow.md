@@ -49,6 +49,8 @@ mvn clean package -pl examples -am
 
 4. 双击打开工作流，解锁后，添加导入节点
 
+![调度流程图](https://github.com/baifendian/swordfish/blob/develop/docs/fault_tolerance.png)
+
 ![添加导入节点](../../docs/imags/workflow/addMysqlImp.png)
 
 5. 双击导入节点，编辑详情
