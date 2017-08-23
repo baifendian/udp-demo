@@ -39,21 +39,21 @@ mvn clean package -pl examples -am
 
 # UDP配置
 
-1. 添加数据源将mysql及mongoDB地址，按[数据源配置](docs/dataSource/dataSource.md)添加UDP数据源, 假设添加的数据源名称为 `udp_demo_mysql` 和 `udp_demo_mongo`
+1. 添加数据源将mysql及mongoDB地址，按[数据源配置](../../docs/dataSource/dataSource.md)添加UDP数据源, 假设添加的数据源名称为 `udp_demo_mysql` 和 `udp_demo_mongo`
 
-2. 将编译好的MR jar通过[资源管理](docs/resource/)上传到UDP平台内，假设资源名称为 `mr_jar`
+2. 将编译好的MR jar通过[资源管理](../../docs/resource/)上传到UDP平台内，假设资源名称为 `mr_jar`
 
 3. 在 `数据开发 -> 工作流开发`内新建工作流. 如下:
 
-![新建工作流](docs/imags/workflow/createWorkflow.png)
+![新建工作流](../../docs/imags/workflow/createWorkflow.png)
 
 4. 双击打开工作流，解锁后，添加导入节点
 
-![添加导入节点](docs/imags/workflow/addMysqlImp.png)
+![添加导入节点](../../docs/imags/workflow/addMysqlImp.png)
 
 5. 双击导入节点，编辑详情
 
-![添加导入节点](docs/imags/workflow/saveMysqlImp.png)
+![添加导入节点](../../docs/imags/workflow/saveMysqlImp.png)
 
 6. 添加MR节点，并编辑详情
 
@@ -65,7 +65,7 @@ mvn clean package -pl examples -am
 
 由于此处的输入和输出路径，在其他节点也需要引用。所以，可以设置成自定义参数。如下：
 
-![MR节点及自定义参数](docs/imags/workflow/mrClean.png)
+![MR节点及自定义参数](../../docs/imags/workflow/mrClean.png)
 
 7. 添加shell节点，编辑详情
    
@@ -73,7 +73,7 @@ mvn clean package -pl examples -am
 
 `hive -e "LOAD DATA INPATH '${demoHdfsOutPath}' OVERWRITE INTO TABLE my_bloxy.global_land_temperatures_by_city"`
 
-![SHELL节点](docs/imags/workflow/shellNode.png)
+![SHELL节点](../../docs/imags/workflow/shellNode.png)
 
 8. 添加SQL节点，编辑详情
 
@@ -87,13 +87,13 @@ INSERT INTO top_n SELECT country, city, max(average_temperature) max_temp FROM m
 
 通过导出节点，将数据从UDP导出到mongoDB内
 
-![导出节点](docs/imags/workflow/shellNode.png)
+![导出节点](../../docs/imags/workflow/shellNode.png)
 
 10. 运行依赖设置
 
 根据节点运行先后顺序，进行依赖设置。如下：
 
-![节点依赖](docs/imags/workflow/dep.png)
+![节点依赖](../../docs/imags/workflow/dep.png)
 
 11. 运行测试
 
@@ -107,15 +107,15 @@ INSERT INTO top_n SELECT country, city, max(average_temperature) max_temp FROM m
 
 运行测试成功后，便可以发布上线了。
 
-![发布上线](docs/imags/workflow/pub.png)
+![发布上线](../../docs/imags/workflow/pub.png)
 
 13. 设置调度
 
 工作流发布成功后，在`运维中心 -> 工作流设置` 找到工作流，点击调度设置，设置调度信息。
 
-![调度设置](docs/imags/workflow/setSchedule.png)
+![调度设置](../../docs/imags/workflow/setSchedule.png)
 
-![设置调度信息](docs/imags/workflow/schedule.png)
+![设置调度信息](../../docs/imags/workflow/schedule.png)
 
 14. **上线**
 
