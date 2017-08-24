@@ -53,15 +53,7 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 
 > 使用UDP平台，演示如何根据mysql数据库内数据，计算全球最热的城市TopN，并将结果自动存储到MongoDB。
 
-步骤如下：
-1. 导入节点将数据从mysql内导入到UDP内HDFS上
-2. MR 数据清洗校正
-3. shell节点将结果
-4. Hive节点计算TopN，topN中的N作为用户自定义参数可以配置
-5. 导出节点将数据从Hive表内导出到外部MongoDB数据库
-6. 设置UDP调度，每日凌晨2点，自动运行。
-
-具体请参考 [工作流及调度配置](docs/workflow/workflow.md)
+具体请参考 [工作流及调度配置](https://github.com/baifendian/udp-demo/wiki/workflow-example)
 
 ## 场景三
 > 说明: 场景的目的是希望用户了解流任务的基本使用
@@ -72,3 +64,13 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 ## 场景四
 > 说明: 场景的目的是希望用户了解 "可视化" ETL 的基本使用
 1. [构建一个可视化 ETL 任务, 并执行(包括发布)](https://github.com/baifendian/udp-demo/wiki/etl-example)
+
+# FAQ
+
+1. **工作流发布失败，提示依赖资源未发布**
+
+在`数据开发 -> 资源管理` 将依赖资源进行发布
+
+1. **导入数据失败，HDFS或者Hive表无权限**
+
+在`数据管理 -> 权限管理`里申请相关Hive表和HDFS路径的权限
