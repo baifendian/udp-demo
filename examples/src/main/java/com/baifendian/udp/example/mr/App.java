@@ -33,11 +33,11 @@ public class App extends Configured implements Tool {
 
     Configuration conf = new Configuration();
 
-    Job job = Job.getInstance(conf, "Pc page view.");
+    Job job = Job.getInstance(conf, "Mr clean");
 
     job.setJarByClass(App.class);
     job.setMapperClass(PcPageViewMapper.class);
-    job.setReducerClass(PcPageViewReducer.class);
+    job.setNumReduceTasks(0);
 
     FileInputFormat.addInputPath(job, new Path(input));
 
@@ -46,8 +46,6 @@ public class App extends Configured implements Tool {
     job.setMapOutputKeyClass(Text.class);
     job.setMapOutputValueClass(Text.class);
 
-    job.setOutputKeyClass(Text.class);
-    job.setOutputValueClass(NullWritable.class);
 
     return job.waitForCompletion(true) ? 0:1;
   }
