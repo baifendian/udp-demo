@@ -1,0 +1,12 @@
+.settings/
+target
+log
+logs
+.idea
+.classpath
+.project
+.metadata
+RemoteSystemsTempFiles
+*.bat
+*.iml
+*.log
