@@ -48,10 +48,6 @@ UDP 是百分点集体的一个平台级产品, 目前已经服务多家客户, 
 ## 场景二
 > 说明: 场景的目的是希望用户了解工作流的基本概念和使用, 以及相应的数据质量检测
 
-场景说明：
-
-> 使用UDP平台，演示如何根据mysql数据库内数据，计算全球最热的城市TopN，并将结果自动存储到MongoDB。
-
 具体请参考 [工作流及调度配置](https://github.com/baifendian/udp-demo/wiki/workflow-example)
 
 ## 场景三
