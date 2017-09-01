@@ -15,7 +15,11 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <spark.version>1.6.0</spark.version>
+    <scala.version>2.10</scala.version>
   </properties>
 
   <dependencyManagement>
@@ -46,6 +50,12 @@
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
         <version>1.2.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.spark</groupId>
+        <artifactId>spark-streaming_${scala.version}</artifactId>
+        <version>${spark.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
