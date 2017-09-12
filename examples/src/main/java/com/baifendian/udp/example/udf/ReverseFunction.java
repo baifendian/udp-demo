@@ -6,10 +6,14 @@ import org.apache.phoenix.expression.Expression;
 import org.apache.phoenix.expression.function.ScalarFunction;
 import org.apache.phoenix.parse.FunctionParseNode.Argument;
 import org.apache.phoenix.parse.FunctionParseNode.BuiltInFunction;
+import org.apache.phoenix.schema.types.PLong;
 import org.apache.phoenix.schema.types.PVarchar;
 import org.apache.phoenix.schema.types.PDataType;
 import org.apache.phoenix.schema.tuple.Tuple;
 
+/**
+ * 函数的输入参数为：bigInt，输入为: varchar
+ */
 @BuiltInFunction(name=ReverseFunction.NAME,  args={
     @Argument(allowedTypes={PVarchar.class})} )
 public class ReverseFunction extends ScalarFunction {
@@ -34,13 +38,13 @@ public class ReverseFunction extends ScalarFunction {
       return false;
     }
 
-    String sourceStr = (String)PVarchar.INSTANCE.toObject(ptr, strExpression.getSortOrder());
+    Long id = (Long) PLong.INSTANCE.toObject(ptr, strExpression.getSortOrder());
 
-    if (sourceStr == null) {
+    if (id == null) {
       return true;
     }
 
-    ptr.set(PVarchar.INSTANCE.toBytes("hello: "+sourceStr));
+    ptr.set(PLong.INSTANCE.toBytes(id*2L));
 
     return true;
   }
