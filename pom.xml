@@ -19,6 +19,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <spark.version>1.6.0</spark.version>
+    <storm.version>1.1.0</storm.version>
     <scala.version>2.10</scala.version>
   </properties>
 
@@ -71,6 +72,21 @@
         <groupId>org.apache.spark</groupId>
         <artifactId>spark-streaming_${scala.version}</artifactId>
         <version>${spark.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.storm</groupId>
+        <artifactId>storm-core</artifactId>
+        <version>${storm.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.storm</groupId>
+        <artifactId>storm-kafka-client</artifactId>
+        <version>${storm.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
