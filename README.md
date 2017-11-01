@@ -78,6 +78,7 @@ UDP Demo 项目的目标是提供一个可操作的过程来对部署好的 UDP 
 # 场景介绍
 
 * 请仔细走完下面的场景，并及时反馈
+* 下面的场景, 以 u_bloxy 账号运行, 所在项目为 p_bloxy, 租户为 t_bloxy
 
 ## 场景一
 > 说明: 演示整个建模、建表的过程, 以及执行一些数据探查、质量校验, 整个过程中, 可能会遇到权限问题, 需要解决相关的授权
@@ -94,15 +95,15 @@ UDP Demo 项目的目标是提供一个可操作的过程来对部署好的 UDP 
 ## 场景三
 > 说明: 演示流任务的基本使用
 
-1. [构建一个 Spark 流任务, 从 Socket 端口读取消息并写到控制台](https://github.com/baifendian/udp-demo/wiki/spark-example)
-1. [构建一个 Storm 流任务, 从 Kafka 读取消息, 分析错误日志并记录到 Kafka 中](https://github.com/baifendian/udp-demo/wiki/storm-example)
+1. [构建一个 Spark 流任务, 从 Socket 端口读取消息并写到 Spark 任务的 UI](https://github.com/baifendian/udp-demo/wiki/spark-example)
+1. [构建一个 Storm 流任务, 从 Kafka 读取消息, 并写到 Storm 任务的 UI](https://github.com/baifendian/udp-demo/wiki/storm-example)
 
 ## 场景四
 > 说明: 演示 "可视化" ETL 的基本使用
 
 1. [构建一个可视化 ETL 任务, 并执行(包括发布)](https://github.com/baifendian/udp-demo/wiki/etl-example)
 
-# 上面的 "场景介绍" 需要给出如下的验证矩阵
+# 上面的 "场景介绍" 需要给出如下的验证矩阵(注意运行的账号)
 
 | 场景        | 子场景   | 说明 | 检查结果 |
 | --------   | --------  | :-------- | :-------- |
